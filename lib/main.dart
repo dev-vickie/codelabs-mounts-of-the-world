@@ -1,10 +1,7 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
-
 import 'package:flutter/material.dart';
-import 'package:mounts_of_the_world/details_page.dart';
 import 'package:mounts_of_the_world/landing_page.dart';
 
-final Color mainColor = Color(0xFFFF5656);
+const Color mainColor = Color(0xFFFF5656);
 void main() {
   runApp(const MyApp());
 }
@@ -14,7 +11,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
       home: SplashPage(),
     );
@@ -29,21 +26,21 @@ class SplashPage extends StatelessWidget {
     //Inside build
     Future.delayed(const Duration(seconds: 2), () {
       Navigator.of(context)
-          .push(MaterialPageRoute(builder: (context) => MountsApp()));
+          .push(MaterialPageRoute(builder: (context) => const MountsApp()));
     });
     return Container(
       color: mainColor,
       child: Stack(
         children: [
-          Align(
+          const Align(
             alignment: Alignment.center,
             child: Icon(Icons.terrain, color: Colors.white, size: 90),
           ),
           Align(
             alignment: Alignment.bottomCenter,
             child: Container(
-              margin: EdgeInsets.only(bottom: 80),
-              child: CircularProgressIndicator(
+              margin: const EdgeInsets.only(bottom: 80),
+              child: const CircularProgressIndicator(
                 valueColor: AlwaysStoppedAnimation<Color>(
                   Colors.white,
                 ),
